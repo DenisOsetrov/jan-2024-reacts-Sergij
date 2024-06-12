@@ -1,0 +1,21 @@
+                        Task-11
+ - Додати в існуючу логіку сторінку з комментарями та сторінку постів+ комментарів.
+ - Все робиться через контекст та сховище.
+   (За допомогою контексту отримуємо відразу всі дані і відображаємо їх частинами в кожній pages. Працюємо з юзерами,
+   постами і коментарями).
+
+                        Послідовність виконання:
+     - Встановлюємо залежності: axios i react-router-dom
+     - Викликаємо в index.tsx <RouterProvider router={router}/>
+     - створюємо директорію router, в якому створюємо
+     const router = createBrowserRouter(routes) і передаємо в нього routes.
+     - Додаємо в children: [
+                   {path:'comments', element:<CommentsPage/>},
+                   {path:'postComments', element:<PostCommentsPage/>}]
+     - Створимо 2 нових pages: <CommentsPage/> i <PostCommentsPage/>
+     - Додаємо в HeaderComponent дві лінки -
+                <li><Link to={'comments'}>comments page</Link></li>
+                <li><Link to={'postComments'}>posts with comments page</Link></li>
+     -
+     -
+     -
